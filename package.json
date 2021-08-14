@@ -23,7 +23,6 @@
 		"esbuild": "^0.12.20",
 		"feed": "^4.2.2",
 		"framer-motion": "^4.1.17",
-		"gray-matter": "^4.0.3",
 		"localforage": "^1.9.0",
 		"mdx-bundler": "^6.0.1",
 		"mdx-embed": "^0.0.19",

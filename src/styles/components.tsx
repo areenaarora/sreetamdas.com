@@ -17,3 +17,8 @@ export const sharedTransition = css`
 	transition-property: color, background-color;
 	transition-timing-function: linear;
 `;
+
+export const MDXTitle = styled.h1<{ color?: string }>`
+	font-size: 2rem;
+	color: ${({ color }) => (color ? color : "red")};
+`;
