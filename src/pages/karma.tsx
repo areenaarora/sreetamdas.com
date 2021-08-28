@@ -5,7 +5,7 @@ import styled from "styled-components";
 import ImageCSS from "@/public/karma/css.webp";
 import ImageElixir from "@/public/karma/elixir.webp";
 import ImagePython from "@/public/karma/python.webp";
-import ImageReact from "@/public/karma/react.webp";
+import ImageReact from "@/public/karma/react.png";
 import { DocumentHead } from "components/shared/seo";
 import { FullWidth } from "styles/layouts";
 import { LinkTo, Title } from "styles/typography";
@@ -47,19 +47,42 @@ const Index = () => {
 				<Title size={2.5} as="h2" id="react">
 					React + TypeScript
 				</Title>
-				<StyledImage src={ImageReact} alt="Karma theme screenshot for React" />
+				<Image
+					quality={100}
+					placeholder={"blur"}
+					src={ImageReact}
+					alt="Karma theme screenshot for React"
+				/>
+
 				<Title size={2.5} as="h2" id="css">
 					CSS
 				</Title>
-				<StyledImage src={ImageCSS} alt="Karma theme screenshot for CSS" />
+				<Image
+					quality={100}
+					placeholder={"blur"}
+					src={ImageCSS}
+					alt="Karma theme screenshot for CSS"
+				/>
+
 				<Title size={2.5} as="h2" id="elixir">
 					Elixir
 				</Title>
-				<StyledImage src={ImageElixir} alt="Karma theme screenshot for Elixir" />
+				<Image
+					quality={100}
+					placeholder={"blur"}
+					src={ImageElixir}
+					alt="Karma theme screenshot for Elixir"
+				/>
+
 				<Title size={2.5} as="h2" id="python">
 					Python
 				</Title>
-				<StyledImage src={ImagePython} alt="Karma theme screenshot for Python" />
+				<Image
+					quality={100}
+					placeholder={"blur"}
+					src={ImagePython}
+					alt="Karma theme screenshot for Python"
+				/>
 			</WideImagesContainer>
 		</Fragment>
 	);
