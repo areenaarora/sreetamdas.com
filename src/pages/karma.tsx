@@ -1,4 +1,4 @@
-import Image, { ImageProps } from "next/image";
+import Image from "next/image";
 import React, { Fragment } from "react";
 import styled from "styled-components";
 
@@ -90,19 +90,19 @@ const Index = () => {
 
 export default Index;
 
-const FullScreenImage = styled.div`
-	margin-top: -40px;
-	max-width: 95vw;
-	justify-self: center;
-	width: 100%;
-	border-radius: var(--border-radius);
-`;
+// const FullScreenImage = styled.div`
+// 	margin-top: -40px;
+// 	max-width: 95vw;
+// 	justify-self: center;
+// 	width: 100%;
+// 	border-radius: var(--border-radius);
+// `;
 
-const StyledImage = (props: ImageProps) => (
-	<FullScreenImage>
-		<Image {...props} quality={100} placeholder={"blur"} />
-	</FullScreenImage>
-);
+// const StyledImage = (props: ImageProps) => (
+// 	<FullScreenImage>
+// 		<Image {...props} quality={100} placeholder={"blur"} />
+// 	</FullScreenImage>
+// );
 
 const WideImagesContainer = styled(FullWidth)`
 	display: grid;
