@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
 import React, { Fragment } from "react";
 import styled from "styled-components";
 
 import ImageCSS from "@/public/karma/css.webp";
 import ImageElixir from "@/public/karma/elixir.webp";
 import ImagePython from "@/public/karma/python.webp";
-import ImageReact from "@/public/karma/react.png";
+import ImageReact from "@/public/karma/react.webp";
 import { DocumentHead } from "components/shared/seo";
 import { FullWidth } from "styles/layouts";
 import { LinkTo, Title } from "styles/typography";
@@ -47,42 +47,19 @@ const Index = () => {
 				<Title size={2.5} as="h2" id="react">
 					React + TypeScript
 				</Title>
-				<Image
-					quality={100}
-					placeholder={"blur"}
-					src={ImageReact}
-					alt="Karma theme screenshot for React"
-				/>
-
+				<StyledImage src={ImageReact} alt="Karma theme screenshot for React" />
 				<Title size={2.5} as="h2" id="css">
 					CSS
 				</Title>
-				<Image
-					quality={100}
-					placeholder={"blur"}
-					src={ImageCSS}
-					alt="Karma theme screenshot for CSS"
-				/>
-
+				<StyledImage src={ImageCSS} alt="Karma theme screenshot for CSS" />
 				<Title size={2.5} as="h2" id="elixir">
 					Elixir
 				</Title>
-				<Image
-					quality={100}
-					placeholder={"blur"}
-					src={ImageElixir}
-					alt="Karma theme screenshot for Elixir"
-				/>
-
+				<StyledImage src={ImageElixir} alt="Karma theme screenshot for Elixir" />
 				<Title size={2.5} as="h2" id="python">
 					Python
 				</Title>
-				<Image
-					quality={100}
-					placeholder={"blur"}
-					src={ImagePython}
-					alt="Karma theme screenshot for Python"
-				/>
+				<StyledImage src={ImagePython} alt="Karma theme screenshot for Python" />
 			</WideImagesContainer>
 		</Fragment>
 	);
@@ -90,19 +67,19 @@ const Index = () => {
 
 export default Index;
 
-// const FullScreenImage = styled.div`
-// 	margin-top: -40px;
-// 	max-width: 95vw;
-// 	justify-self: center;
-// 	width: 100%;
-// 	border-radius: var(--border-radius);
-// `;
+const FullScreenImage = styled.div`
+	margin-top: -40px;
+	max-width: 95vw;
+	justify-self: center;
+	width: 100%;
+	border-radius: var(--border-radius);
+`;
 
-// const StyledImage = (props: ImageProps) => (
-// 	<FullScreenImage>
-// 		<Image {...props} quality={100} placeholder={"blur"} />
-// 	</FullScreenImage>
-// );
+const StyledImage = (props: ImageProps) => (
+	<FullScreenImage>
+		<Image {...props} quality={100} placeholder={"blur"} />
+	</FullScreenImage>
+);
 
 const WideImagesContainer = styled(FullWidth)`
 	display: grid;
